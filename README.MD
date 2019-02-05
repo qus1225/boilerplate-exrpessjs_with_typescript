@@ -1,5 +1,13 @@
 # Express.js + TypeScript MVC 어플리케이션 BoilerPlate
 
+### 구동 방법
++ 셋팅
+  + npm run install
++ 개발
+  + npm run watch
++ 빌드
+  + npm run build
+
 
 ### 참고 정보
 
