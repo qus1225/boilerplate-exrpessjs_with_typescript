@@ -1,12 +1,15 @@
 # Express.js + TypeScript MVC 어플리케이션 BoilerPlate
 
 ### 구동 방법
++ Prerequsite
+  + 필수 전역 모듈 설치
+    $ npm install -g typescript concurrently nodemon node-sass ts-node tslint
 + 셋팅
-  + npm run install
+  + $ npm run install
 + 개발
-  + npm run watch
+  + $ npm run watch
 + 빌드
-  + npm run build
+  + $ npm run build
 
 
 ### 참고 정보
