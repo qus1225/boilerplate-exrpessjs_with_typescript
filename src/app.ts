@@ -2,9 +2,9 @@ import express from "express";
 import dotenv from "dotenv";
 import path from "path";
 import bodyParser from "body-parser";
-import router from "./router";
 import expressVue from "express-vue";
 import { RequestHandlerParams } from "express-serve-static-core";
+import homeController from "./controllers/homeController";
 
 
 // Load environment variables from .env file, where API keys and passwords are configured
@@ -30,8 +30,8 @@ const app = express();
 // });
 
 
-// Express configuration
 app.set("port", process.env.PORT || 3001);
+
 // ExpressVue Setup
 const vueOptions: any = {
   rootPath: path.join(__dirname, "../views"),
@@ -42,7 +42,10 @@ const vueOptions: any = {
 };
 const expressVueMiddleware = expressVue.init(vueOptions);
 app.use(expressVueMiddleware as RequestHandlerParams);
-app.use(router);
+
+// Router
+app.use("/", homeController);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
