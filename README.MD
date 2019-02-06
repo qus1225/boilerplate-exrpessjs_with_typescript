@@ -4,7 +4,7 @@
 ### 구동 방법
 + Prerequsite
   + 필수 전역 모듈 설치
-    $ npm install -g typescript concurrently nodemon node-sass ts-node tslint
+    $ npm install -g typescript concurrently nodemon node-sass ts-node tslint node-pre-gyp
 + 셋팅
   + $ npm run install
 + 개발
