@@ -2,8 +2,9 @@ import express from "express";
 import dotenv from "dotenv";
 import path from "path";
 import bodyParser from "body-parser";
-import mustacheExpress from "mustache-express";
 import router from "./router";
+import expressVue from "express-vue";
+import { RequestHandlerParams } from "express-serve-static-core";
 
 
 // Load environment variables from .env file, where API keys and passwords are configured
@@ -31,10 +32,16 @@ const app = express();
 
 // Express configuration
 app.set("port", process.env.PORT || 3001);
-// Register '.mustache' extension with The Mustache Express
-app.engine("mst", mustacheExpress());
-app.set("view engine", "mst");
-app.set("views", path.join(__dirname, "../views"));
+// ExpressVue Setup
+const vueOptions: any = {
+  rootPath: path.join(__dirname, "../views"),
+  head: {
+    title: "Common Title",
+    styles: [{ style: "/css/main.css" }],
+  },
+};
+const expressVueMiddleware = expressVue.init(vueOptions);
+app.use(expressVueMiddleware as RequestHandlerParams);
 app.use(router);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
