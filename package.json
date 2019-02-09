@@ -27,7 +27,9 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-vue": "^5.8.2",
-    "nodemailer": "^5.1.1"
+    "nodemailer": "^5.1.1",
+    "winston": "^3.2.1",
+    "winston-slack-webhook-transport": "0.0.4"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",

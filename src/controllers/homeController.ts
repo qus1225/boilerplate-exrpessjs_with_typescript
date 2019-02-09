@@ -1,7 +1,10 @@
 import express from "express";
+import logger from "../util/logger";
+
 const router = express.Router();
 
 router.get("/", (req: any, res: any) => {
+  logger.info("logging test");
   const data = {
     title: "body content",
   };
