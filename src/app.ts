@@ -49,14 +49,14 @@ const vueOptions: any = {
 const expressVueMiddleware = expressVue.init(vueOptions);
 app.use(expressVueMiddleware as RequestHandlerParams);
 
-// Router
-app.use("/", homeController);
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   express.static(path.join(__dirname, "public"), { maxAge: 31557600000 })
 );
+
+// Router
+app.use("/", homeController);
 
 /**
  * API examples routes.
