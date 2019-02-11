@@ -37,7 +37,13 @@ const vueOptions: any = {
   rootPath: path.join(__dirname, "../views"),
   head: {
     title: "Common Title",
-    styles: [{ style: "/css/main.css" }],
+    scripts: [
+      // { src: "/js/lib/simplemde.min.js" }
+    ],
+    styles: [
+      { style: "/css/main.css" },
+      // { style: "/css/lib/simplemde.min.css" },
+    ],
   },
 };
 const expressVueMiddleware = expressVue.init(vueOptions);
