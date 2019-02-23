@@ -20,10 +20,11 @@ if (process.env.NODE_ENV !== "production") {
     level: "info"
   }));
 
-  logger.add(new SlackHook({
-    webhookUrl: "https://hooks.slack.com/services/xxxx/xxxx/xxxx",
-    level: "info",
-  }));
+  // 유효한 webhookUrl을 넣은 후 사용가능
+  // logger.add(new SlackHook({
+  //   webhookUrl: "https://hooks.slack.com/services/xxxx/xxxx/xxxx",
+  //   level: "info",
+  // }));
 }
 
 if (process.env.NODE_ENV !== "production") {

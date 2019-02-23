@@ -2,8 +2,6 @@ import express from "express";
 import dotenv from "dotenv";
 import path from "path";
 import bodyParser from "body-parser";
-import expressVue from "express-vue";
-import { RequestHandlerParams } from "express-serve-static-core";
 import homeController from "./controllers/homeController";
 
 
@@ -31,23 +29,6 @@ const app = express();
 
 
 app.set("port", process.env.PORT || 3001);
-
-// ExpressVue Setup
-const vueOptions: any = {
-  rootPath: path.join(__dirname, "../views"),
-  head: {
-    title: "Common Title",
-    scripts: [
-      // { src: "/js/lib/simplemde.min.js" }
-    ],
-    styles: [
-      { style: "/css/main.css" },
-      // { style: "/css/lib/simplemde.min.css" },
-    ],
-  },
-};
-const expressVueMiddleware = expressVue.init(vueOptions);
-app.use(expressVueMiddleware as RequestHandlerParams);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

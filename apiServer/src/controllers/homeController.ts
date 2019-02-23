@@ -5,11 +5,7 @@ const router = express.Router();
 
 router.get("/", (req: any, res: any) => {
   logger.info("logging test");
-  const data = {
-    title: "body content",
-  };
-  req.vueOptions.head.title = "Custom title";
-  res.renderVue("home.vue", data, req.vueOptions);
+  res.send("Home");
 });
 
 export default router;
