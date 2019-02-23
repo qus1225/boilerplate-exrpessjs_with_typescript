@@ -1,29 +1,11 @@
-# 'Express.js + TypeScript + Vue.js' MVC 어플리케이션 BoilerPlate
+# 'Express.js + TypeScript' 어플리케이션 BoilerPlate
 
+## 설명
++ apiServer 폴더
+  + API 앱 (exrpess.js + typeScript) 보일러플레이트
++ monolithicServerWithVue 폴더
+  + 모놀리틱 앱 (exrpess.js + typeScript + vue.js)
 
-### 구동 방법
-+ Prerequsite
-  + 필수 전역 모듈 설치
-    $ npm install -g typescript concurrently nodemon node-sass ts-node tslint node-pre-gyp
-+ 셋팅
-  + $ npm run install
-+ 개발
-  + $ npm run watch
-  + VSCode로 typescript 디버거 사용 가능
-  + watch가 안 되는 파일들은, ts파일이나 scss파일 등 watch가 되는 파일을 다시 save해주면서 개발하면 편함.
-+ 빌드
-  + $ npm run build
-+ 유의사항
-  + vue에는 typeScript 및 watch 셋팅 안 되어 있음.
+## 사용방법
++ 목적에 맞는 폴더를 복사 (각 앱의 사용법은 폴더 내 README참고)
 
-
-### 참고 정보
-
-+ 아래 샘플코드를 참고하여 만듦
-  + exrpess + ts
-    + https://github.com/Microsoft/TypeScript-Node-Starter#typescript-node-starter
-  + express + vue.js
-    + https://github.com/express-vue/express-vue
-    + https://github.com/express-vue/express-vue-mvc-starter
-
-+ monolithic MVC 어플리케이션의 보일러 플레이트지만, sass, public asset, vue관련 코드만 제외하면 API 어플리케이션으로도 사용 가능
