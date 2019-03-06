@@ -5,7 +5,7 @@
   + 필수 전역 모듈 설치
     $ npm install -g typescript concurrently nodemon node-sass ts-node tslint node-pre-gyp
 + 셋팅
-  + $ npm run install
+  + $ npm install
 + 개발
   + $ npm run watch
   + VSCode로 typescript 디버거 사용 가능

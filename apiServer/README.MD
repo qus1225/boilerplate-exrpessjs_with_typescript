@@ -5,7 +5,7 @@
   + 필수 전역 모듈 설치
     $ npm install -g typescript ts-node tslint
 + 셋팅
-  + $ npm run install
+  + $ npm install
 + 아래 (정리할 것) 참고해서 하기
 
 ---
