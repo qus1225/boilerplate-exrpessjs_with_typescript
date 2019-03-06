@@ -3,10 +3,17 @@
 ## 구동 방법
 + Prerequsite
   + 필수 전역 모듈 설치
-    $ npm install -g typescript ts-node tslint
+    `npm install -g typescript ts-node tslint concurrently nodemon`
 + 셋팅
-  + $ npm install
-+ 아래 (정리할 것) 참고해서 하기
+  + `npm install`
++ 개발
+  + `npm run watch` (코드 변경 감지하여 서버 재시작)
+  + swagger 페이지 갱신하고 싶을때: `npm run swagger`
++ 빌드
+  + `npm run build`
+  + (빌드 파일 시작) `npm run start`
++ 배포
+  + (환경에 따라 다름)
 
 ---
 
@@ -14,47 +21,4 @@
 
 + 아래 샘플코드를 참고하여 만듦
   + https://github.com/vrudikov/typescript-rest-boilerplate
-
-
----
-
-(정리할 것)
-# TODO
-- JWT tokens for security. Use new [security decorator](https://github.com/thiagobustamante/typescript-rest/wiki/@Security-Decorator)
-- MongoDB connection example. I have implementation, need to push here
-
-# Initial setup
-```
-npm install
-```
-
-## Swagger Docs Generation
-
-```
-npm run swagger
-```
-
-# Project run
-```
-npm start
-```
-
-## Start project in cluster
-```
-npm start:cluster
-```
-
-## Test
-
-```
-npm run test
-```
-
-### Test with coverage reports:
-
-```
-npm run test:coverage
-```
-
-The coverage report will be saved under ```./reports/coverage``` folder.
-
+  + https://github.com/Microsoft/TypeScript-Node-Starter#typescript-node-starter
