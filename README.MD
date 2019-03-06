@@ -2,6 +2,8 @@
 
 ## 설명
 + apiServer 폴더
+  + API 앱 (exrpess.js + typeScript + swagger) 보일러플레이트
++ legacy_apiServer 폴더 (이것보다 위의 apiServer를 사용할 것)
   + API 앱 (exrpess.js + typeScript) 보일러플레이트
 + monolithicServerWithVue 폴더
   + 모놀리틱 앱 (exrpess.js + typeScript + vue.js)

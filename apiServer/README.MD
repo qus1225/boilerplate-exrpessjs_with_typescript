@@ -1,24 +1,60 @@
-# 'Express.js + TypeScript' API 어플리케이션 BoilerPlate
+# 'Express.js + TypeScript + Swagger' API 어플리케이션 BoilerPlate
 
 ## 구동 방법
 + Prerequsite
   + 필수 전역 모듈 설치
-    $ npm install -g typescript concurrently nodemon node-sass ts-node tslint node-pre-gyp
+    $ npm install -g typescript ts-node tslint
 + 셋팅
   + $ npm run install
-+ 개발
-  + $ npm run watch
-  + VSCode로 typescript 디버거 사용 가능
-  + watch가 안 되는 파일들은, ts파일이나 scss파일 등 watch가 되는 파일을 다시 save해주면서 개발하면 편함.
-+ 빌드
-  + $ npm run build
-+ 유의사항
-  + vue에는 typeScript 및 watch 셋팅 안 되어 있음.
++ 아래 (정리할 것) 참고해서 하기
 
 ---
 
 ## 참고 정보
 
 + 아래 샘플코드를 참고하여 만듦
-  + exrpess + ts
-    + https://github.com/Microsoft/TypeScript-Node-Starter#typescript-node-starter
+  + https://github.com/vrudikov/typescript-rest-boilerplate
+
+
+---
+
+(정리할 것)
+# TODO
+- JWT tokens for security. Use new [security decorator](https://github.com/thiagobustamante/typescript-rest/wiki/@Security-Decorator)
+- MongoDB connection example. I have implementation, need to push here
+
+# Initial setup
+```
+npm install
+```
+
+## Swagger Docs Generation
+
+```
+npm run swagger
+```
+
+# Project run
+```
+npm start
+```
+
+## Start project in cluster
+```
+npm start:cluster
+```
+
+## Test
+
+```
+npm run test
+```
+
+### Test with coverage reports:
+
+```
+npm run test:coverage
+```
+
+The coverage report will be saved under ```./reports/coverage``` folder.
+

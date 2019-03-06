@@ -1,21 +1,24 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "module": "commonjs",
-    "esModuleInterop": true,
-    "target": "es6",
+    "newLine": "LF",
+    "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": false,
+    "noUnusedParameters": false,
+    "noUnusedLocals": true,
     "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "node_modules/*",
-        "src/types/*"
-      ]
-    }
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strictNullChecks": false,
+    "target": "es2016"
   },
   "include": [
-    "src/**/*"
+    "src/**/*.ts"
   ]
 }
